@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=
+Comment=Notebook UI for Jupyter kernels
+Exec=sh -c 'systemctl --user start runtimed && exec /opt/nteract/AppRun'
+StartupWMClass=notebook
+Icon=/opt/nteract/nteract.png
+Name=nteract
+Terminal=false
+Type=Application
+MimeType=application/x-ipynb+json

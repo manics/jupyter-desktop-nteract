@@ -1,0 +1,28 @@
+repos:
+  # Autoformat: markdown, yaml
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.8.1
+    hooks:
+      - id: prettier
+
+  # `pre-commit sample-config` default hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  # Lint: Dockerfile
+  - repo: https://github.com/hadolint/hadolint.git
+    rev: v2.14.0
+    hooks:
+      - id: hadolint-docker
+        entry: hadolint/hadolint:v2.12.1-beta hadolint
+
+  # Validate YAML/JSON against schemas
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.37.1
+    hooks:
+      - id: check-dependabot
+      - id: check-github-workflows
